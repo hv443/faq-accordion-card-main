@@ -34,7 +34,7 @@ main{
 
 .container{
 
-   
+  min-height: 400px;
   
     @include displayCenter(center,column);
     background-color: white;
@@ -43,6 +43,7 @@ main{
        @include displayCenter(center,row ) ;
        overflow: hidden;   
        width: 60%; 
+       min-height: 400px;
 
        background: url(/images/bg-pattern-desktop.svg) no-repeat white;
         background-size: 80%;
@@ -113,15 +114,16 @@ main{
         align-items: flex-start;
      }
 
-    .qnaBox{width: 100%;
+    .qnaBox{width:100%;
     }
     
     .qna{
         border-bottom: 1px solid hsl(240, 5%, 91%);
-        width: 100%;
-        padding: 0 1.5rem;
+        width: 80%;
+        margin: 0 auto;
         @media screen and (min-width:500px) {
-            padding: 0;      
+            padding: 0;  
+            margin: 0;    
           }
 
         .question{
@@ -157,10 +159,9 @@ main{
     }
     .question{
         color: $active-question;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 14px;
     }
-
     img{
         
         transform: rotate(180deg);
