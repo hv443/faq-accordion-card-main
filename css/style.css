@@ -25,25 +25,29 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
   background-color: white;
+  width: 80%;
   border-radius: 1rem;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
   .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     overflow: hidden;
-    width: 70%;
+    width: 60%;
+    background: url(/images/bg-pattern-desktop.svg) no-repeat white;
+    background-size: 80%;
+    background-position-x: -240%;
+    background-position-y: 70%;
   }
 }
 
 .image-area {
   height: 8rem;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
   .image-area {
     display: flex;
     align-items: center;
@@ -57,19 +61,19 @@ main {
   width: 12%;
   position: absolute;
   z-index: 1;
-  left: 8%;
-  top: 45%;
+  left: 12%;
+  top: 44%;
 }
 .image-area .dekstop-main-img {
   width: 100%;
   transform: translateX(-30%);
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .image-area .dekstop-img {
     display: none;
   }
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
   .image-area .mobile {
     display: none;
   }
@@ -86,10 +90,10 @@ main {
   width: 100%;
   padding-bottom: 2rem;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
   .text-area {
     width: 40%;
-    padding: 2rem 0;
+    padding: 3rem 0;
     margin-right: 3rem;
     display: flex;
     align-items: center;
@@ -106,7 +110,7 @@ main {
   width: 100%;
   padding: 0 1.5rem;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
   .text-area .qna {
     padding: 0;
   }
@@ -123,16 +127,27 @@ main {
 .text-area .qna .question:hover {
   color: hsl(14deg, 88%, 65%);
 }
+.text-area .qna .question img {
+  transition: all 0.5s;
+}
 .text-area .qna .answer {
   margin-bottom: 1rem;
   color: hsl(240deg, 6%, 50%);
   transition: 1s;
 }
 
-.Nvisible {
+.answer {
   display: none;
 }
 
-.visible {
+.active .answer {
   display: block;
+}
+.active .question {
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 600;
+  font-size: 14px;
+}
+.active img {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style.css.map */

@@ -1,17 +1,20 @@
 const question = document.querySelectorAll(".question")
-const answer = document.querySelector(".answer")
+const answer = document.querySelectorAll(".answer")
 
+
+const que = new Array(question)
 
 question.forEach(q=>{
-    q.addEventListener("click", (g)=>{
+    q.addEventListener('click', ()=>{
 
-        if(event.target.innerHTML === q.innerHTML){
-            answer.classList.toggle('visible')
-            answer.classList.toggle('Nvisible')
-            console.log("usahdi")
+        if(q.parentNode.classList.contains('active')){
+            q.parentNode.classList.toggle('active')
         }
-       
+        else{
+           question.forEach(q=>{
+            q.parentNode.classList.remove('active')
+           })
+           q.parentNode.classList.add('active')
+        }
     })
 })
-
-

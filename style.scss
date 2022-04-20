@@ -33,16 +33,24 @@ main{
 }
 
 .container{
-    @include displayCenter(center,column);
 
-    @media screen and (min-width:450px) {
+   
+  
+    @include displayCenter(center,column);
+    background-color: white;
+
+    @media screen and (min-width:500px) {
        @include displayCenter(center,row ) ;
        overflow: hidden;   
-       width: 70%;  
+       width: 60%; 
+
+       background: url(/images/bg-pattern-desktop.svg) no-repeat white;
+        background-size: 80%;
+        background-position-x:-240%; 
+        background-position-y:70%; 
     }
 
     width: 80%;
-    background-color: white;
     border-radius: 1rem;
 }
 
@@ -52,7 +60,7 @@ main{
 
 
     height: 8rem;
-    @media screen and (min-width:450px) {
+    @media screen and (min-width:500px) {
         @include displayCenter(center, column);
         height: 100%; 
         width: 40%;     
@@ -62,22 +70,24 @@ main{
         width: 12%;
         position: absolute;
         z-index: 1;
-        left:8%;
-        top: 45%;
+        left:12%;
+        top: 44%;
     }
 
     .dekstop-main-img{
         width:100%;
         transform: translateX(-30%);
+
     }
 
     .dekstop-img{
-        @media screen and (max-width:450px) {
+        @media screen and (max-width:500px) {
             display:none;       
         }
+        
     }
     .mobile{
-    @media screen and (min-width:450px) {
+    @media screen and (min-width:500px) {
         display:none;       
         }
     }
@@ -95,9 +105,9 @@ main{
     width: 100%;
     padding-bottom: 2rem;
 
-    @media screen and (min-width:450px) {
+    @media screen and (min-width:500px) {
         width: 40%; 
-        padding: 2rem 0;
+        padding:3rem 0;
         margin-right: 3rem;
         @include displayCenter(center,column )   ;
         align-items: flex-start;
@@ -110,7 +120,7 @@ main{
         border-bottom: 1px solid hsl(240, 5%, 91%);
         width: 100%;
         padding: 0 1.5rem;
-        @media screen and (min-width:450px) {
+        @media screen and (min-width:500px) {
             padding: 0;      
           }
 
@@ -123,6 +133,9 @@ main{
             &:hover{
                 color: $hover-question;
             }
+            img{
+                transition:all .5s ;
+            }
         }
         .answer{
             margin-bottom: 1rem;
@@ -134,10 +147,23 @@ main{
 }
 
 
-.Nvisible{
-    display: none;
+.answer{
+   display: none;
 }
 
-.visible{
-   display: block;
+.active {
+    .answer{
+        display: block;
+    }
+    .question{
+        color: $active-question;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    img{
+        
+        transform: rotate(180deg);
+    }
+
 }
