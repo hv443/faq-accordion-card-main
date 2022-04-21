@@ -40,9 +40,9 @@ main{
     background-color: white;
 
     @media screen and (min-width:500px) {
-       @include displayCenter(center,row ) ;
+       @include displayCenter(space-between,row ) ;
        overflow: hidden;   
-       width: 60%; 
+       width: 50%; 
        min-height: 400px;
 
        background: url(/images/bg-pattern-desktop.svg) no-repeat white;
@@ -64,20 +64,20 @@ main{
     @media screen and (min-width:500px) {
         @include displayCenter(center, column);
         height: 100%; 
-        width: 40%;     
+        width: 80%;     
      }
 
     .box-img{
-        width: 12%;
+        width: 11%;
         position: absolute;
         z-index: 1;
-        left:12%;
-        top: 44%;
+        left:18%;
+        top: 45%;
     }
 
     .dekstop-main-img{
         width:100%;
-        transform: translateX(-30%);
+        transform: translateX(-20%);
 
     }
 
@@ -107,9 +107,8 @@ main{
     padding-bottom: 2rem;
 
     @media screen and (min-width:500px) {
-        width: 40%; 
+        width: 80%; 
         padding:3rem 0;
-        margin-right: 3rem;
         @include displayCenter(center,column )   ;
         align-items: flex-start;
      }

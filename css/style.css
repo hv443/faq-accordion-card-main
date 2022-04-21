@@ -34,10 +34,10 @@ main {
   .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     overflow: hidden;
-    width: 60%;
+    width: 50%;
     min-height: 400px;
     background: url(/images/bg-pattern-desktop.svg) no-repeat white;
     background-size: 80%;
@@ -56,19 +56,19 @@ main {
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    width: 40%;
+    width: 80%;
   }
 }
 .image-area .box-img {
-  width: 12%;
+  width: 11%;
   position: absolute;
   z-index: 1;
-  left: 12%;
-  top: 44%;
+  left: 18%;
+  top: 45%;
 }
 .image-area .dekstop-main-img {
   width: 100%;
-  transform: translateX(-30%);
+  transform: translateX(-20%);
 }
 @media screen and (max-width: 500px) {
   .image-area .dekstop-img {
@@ -94,9 +94,8 @@ main {
 }
 @media screen and (min-width: 500px) {
   .text-area {
-    width: 40%;
+    width: 80%;
     padding: 3rem 0;
-    margin-right: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
